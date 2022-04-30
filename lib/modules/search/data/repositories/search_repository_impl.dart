@@ -7,7 +7,7 @@ import 'package:flutter_clean_architecture/modules/search/domain/repositories/se
 class SearchRepositoryImpl implements SearchRepository {
   final SearchDataSource datasource;
 
-  SearchRepositoryImpl(this.datasource);
+  SearchRepositoryImpl({required this.datasource});
 
   @override
   Future<Either<FailureSearch, List<ResultSearch>>> search(

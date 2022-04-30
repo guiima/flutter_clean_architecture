@@ -9,7 +9,7 @@ class SearchController = _SearchController with _$SearchController;
 abstract class _SearchController with Store {
   final SearchText usecase;
 
-  _SearchController(this.usecase);
+  _SearchController({required this.usecase});
 
   @observable
   List<ResultSearch> resultSearch = ObservableList.of([]);

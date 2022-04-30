@@ -20,7 +20,7 @@ void main() {
 
   setUp(() {
     dio = DioMock();
-    datasource = GithubDatasource(dio);
+    datasource = GithubDatasource(dio: dio);
     path = 'https://api.github.com/search/users?q=guiima';
     searchText = 'guiima';
   });

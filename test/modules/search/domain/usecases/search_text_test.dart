@@ -15,7 +15,7 @@ void main() {
 
   setUp(() {
     repositoryMock = SearchRepositoryMock();
-    searchTextImpl = SearchTextImpl(repositoryMock);
+    searchTextImpl = SearchTextImpl(searchRepository: repositoryMock);
     searchText = 'search text';
   });
 

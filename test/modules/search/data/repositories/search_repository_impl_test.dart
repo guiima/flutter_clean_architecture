@@ -15,7 +15,7 @@ void main() {
 
   setUp(() {
     datasource = SearchDataSourceMock();
-    repository = SearchRepositoryImpl(datasource);
+    repository = SearchRepositoryImpl(datasource: datasource);
     searchText = 'search text';
   });
 

@@ -30,6 +30,7 @@ dependencies:
   flutter:
     sdk: flutter
   mobx:
+  get_it:
   flutter_mobx:
   bloc:
   flutter_modular:

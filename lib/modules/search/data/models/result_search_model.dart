@@ -3,8 +3,8 @@ import 'dart:convert';
 import 'package:flutter_clean_architecture/modules/search/domain/entities/result_search.dart';
 
 class ResultSearchModel extends ResultSearch {
-  ResultSearchModel(String login, int id, String avatar_url)
-      : super(login, id, avatar_url);
+  ResultSearchModel(String login, int id, String avatarUrl)
+      : super(login, id, avatarUrl);
 
   Map<String, dynamic> toMap() {
     return {

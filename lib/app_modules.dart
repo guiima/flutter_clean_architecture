@@ -14,11 +14,11 @@ class AppModule extends Module {
   @override
   List<Bind> get binds => [
         Bind((i) => Dio()),
-        Bind((i) => GithubDatasource(i())),
-        Bind((i) => SearchRepositoryImpl(i())),
-        Bind((i) => SearchTextImpl(i())),
+        Bind((i) => GithubDatasource(dio: i())),
+        Bind((i) => SearchRepositoryImpl(datasource: i())),
+        Bind((i) => SearchTextImpl(searchRepository: i())),
         Bind((i) => SearchBloc(SearchStart(), i())),
-        Bind((i) => SearchController(i())),
+        Bind((i) => SearchController(usecase: i())),
       ];
 
   @override

@@ -9,9 +9,9 @@ abstract class SearchText {
 }
 
 class SearchTextImpl implements SearchText {
-  final SearchRepository _searchRepository;
+  final SearchRepository searchRepository;
 
-  SearchTextImpl(this._searchRepository);
+  SearchTextImpl({required this.searchRepository});
 
   @override
   Future<Either<FailureSearch, List<ResultSearch>>> searchText(
@@ -19,6 +19,6 @@ class SearchTextImpl implements SearchText {
     if (searchText.isEmpty) {
       return Left(InvalidTextError('O Texto não pode ser vazio!'));
     }
-    return await _searchRepository.search(searchText);
+    return await searchRepository.search(searchText);
   }
 }

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
-import 'package:flutter_modular/flutter_modular.dart';
+import 'package:get_it/get_it.dart';
 import 'dart:async';
 import 'controller/search_controller.dart';
 
@@ -12,7 +12,7 @@ class SearchPageWithMobx extends StatefulWidget {
 }
 
 class _SearchPageWithMobxState extends State<SearchPageWithMobx> {
-  final _controller = Modular.get<SearchController>();
+  final _controller = GetIt.instance.get<SearchController>();
   Timer? _debounce;
 
   @override

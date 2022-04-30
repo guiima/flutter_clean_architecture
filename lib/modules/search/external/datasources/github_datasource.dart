@@ -12,7 +12,7 @@ extension on String {
 class GithubDatasource implements SearchDataSource {
   final Dio dio;
 
-  GithubDatasource(this.dio);
+  GithubDatasource({required this.dio});
 
   @override
   Future<List<ResultSearchModel>> getSearch(String searchText) async {
