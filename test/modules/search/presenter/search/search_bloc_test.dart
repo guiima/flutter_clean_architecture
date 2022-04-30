@@ -8,9 +8,9 @@ import 'package:flutter_clean_architecture/modules/search/domain/errors/errors.d
 import 'package:flutter_clean_architecture/modules/search/domain/repositories/search_repository.dart';
 import 'package:flutter_clean_architecture/modules/search/domain/usecases/search_text.dart';
 import 'package:flutter_clean_architecture/modules/search/external/datasources/github_datasource.dart';
-import 'package:flutter_clean_architecture/modules/search/presenter/search/search_bloc.dart';
-import 'package:flutter_clean_architecture/modules/search/presenter/search/state/search_event.dart';
-import 'package:flutter_clean_architecture/modules/search/presenter/search/state/search_state.dart';
+import 'package:flutter_clean_architecture/modules/search/presenter/bloc/search_bloc.dart';
+import 'package:flutter_clean_architecture/modules/search/presenter/bloc/state/search_event.dart';
+import 'package:flutter_clean_architecture/modules/search/presenter/bloc/state/search_state.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 

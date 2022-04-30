@@ -1,18 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_clean_architecture/modules/search/presenter/search/search_bloc.dart';
-import 'package:flutter_clean_architecture/modules/search/presenter/search/state/search_event.dart';
-import 'package:flutter_clean_architecture/modules/search/presenter/search/state/search_state.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'dart:async';
 
-class SearchPage extends StatefulWidget {
-  const SearchPage({Key? key}) : super(key: key);
+import 'bloc/search_bloc.dart';
+import 'bloc/state/search_event.dart';
+import 'bloc/state/search_state.dart';
+
+class SearchPageWithBloc extends StatefulWidget {
+  const SearchPageWithBloc({Key? key}) : super(key: key);
 
   @override
-  State<SearchPage> createState() => _SearchPageState();
+  State<SearchPageWithBloc> createState() => _SearchPageWithBlocState();
 }
 
-class _SearchPageState extends State<SearchPage> {
+class _SearchPageWithBlocState extends State<SearchPageWithBloc> {
   final SearchBloc _bloc = Modular.get<SearchBloc>();
   Timer? _debounce;
 
@@ -26,7 +27,7 @@ class _SearchPageState extends State<SearchPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Github Search'),
+        title: const Text('Github Search with Bloc'),
       ),
       body: Column(
         children: [
